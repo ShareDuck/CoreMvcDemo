@@ -4,10 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-
+using Domain;
 namespace NetCoreMVC
 {
     public class Startup
@@ -27,8 +28,10 @@ namespace NetCoreMVC
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            // Add framework services.
-            services.AddMvc();
+			// Add framework services.
+			services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("SqlServerConnection")));
+			services.AddMvc();
+			services.AddTransient<Service.IService.SysManage.IUserManage, Service.ServiceImp.SysManage.UserManage>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
