@@ -12,6 +12,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "NetCoreMVC", "src\NetCoreMVC\NetCoreMVC.xproj", "{6CE144B6-0D90-4877-9AC6-7CEEB6B5FF7B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Commons", "Commons", "{CA789581-494F-4ECF-8900-6D348617CBBA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domains", "Domains", "{B413E97F-1E0C-4272-AE63-A01398D3E5F8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{403B9A8C-3F2F-45EF-90F0-C41FCD9753FC}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Domain", "Domain\Domain.xproj", "{924F5EC6-4637-4DBD-AEE6-471595500001}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,11 +30,16 @@ Global
 		{6CE144B6-0D90-4877-9AC6-7CEEB6B5FF7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6CE144B6-0D90-4877-9AC6-7CEEB6B5FF7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6CE144B6-0D90-4877-9AC6-7CEEB6B5FF7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{924F5EC6-4637-4DBD-AEE6-471595500001}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{924F5EC6-4637-4DBD-AEE6-471595500001}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{924F5EC6-4637-4DBD-AEE6-471595500001}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{924F5EC6-4637-4DBD-AEE6-471595500001}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{6CE144B6-0D90-4877-9AC6-7CEEB6B5FF7B} = {57AAA564-7E7A-48E6-BDD0-77A8670B4E5B}
+		{924F5EC6-4637-4DBD-AEE6-471595500001} = {B413E97F-1E0C-4272-AE63-A01398D3E5F8}
 	EndGlobalSection
 EndGlobal
