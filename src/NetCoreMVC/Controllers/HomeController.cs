@@ -9,13 +9,13 @@ namespace NetCoreMVC.Controllers
 {
 	public class HomeController : Controller
     {
-
+		TestDbContext dbcon;
 		public HomeController(IServiceProvider service)
 		{
 			dbcon = new TestDbContext(service.GetRequiredService<DbContextOptions<TestDbContext>>());
 		}
 
-		TestDbContext dbcon;
+		
         public IActionResult Index()
         {
             return View();
@@ -39,7 +39,6 @@ namespace NetCoreMVC.Controllers
 		{
 			var users = dbcon.Users.ToList();
 			return View(users);
-
 		}
 
         public IActionResult Error()
