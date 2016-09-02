@@ -1,0 +1,21 @@
+﻿@model List<NetCoreMVC.Entities.User>
+
+<h1>测试用户</h1>
+<table border="1">
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>userName</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>@item.u_id</td>
+				<td>@item.u_name</td>
+			</tr>
+		}
+	</tbody>
+</table>
+

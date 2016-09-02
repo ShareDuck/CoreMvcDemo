@@ -4,12 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore;
 using NetCoreMVC.Entities;
-using MySQL.Data.EntityFrameworkCore.Extensions;
 
 namespace NetCoreMVC
 {
@@ -32,7 +31,7 @@ namespace NetCoreMVC
         {
 			// Add framework services.
 			//services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("SqlServerConnection")));
-			services.AddDbContext<TestDbContext>(options => options.UseMySQL(Configuration.GetConnectionString("MySqlConnection")));
+			services.AddDbContext<TestDbContext>(options => options.UseMySql(Configuration.GetConnectionString("MySqlConnection")));
 			services.AddMvc();
         }
 

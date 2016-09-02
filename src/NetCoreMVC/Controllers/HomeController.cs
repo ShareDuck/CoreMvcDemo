@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using NetCoreMVC.Entities;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
 namespace NetCoreMVC.Controllers
 {
@@ -36,7 +37,7 @@ namespace NetCoreMVC.Controllers
 
 		public IActionResult MysqlUser()
 		{
-			var users = dbcon.Users.ToListAsync();
+			var users = dbcon.Users.ToList();
 			return View(users);
 
 		}
