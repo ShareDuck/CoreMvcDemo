@@ -1,20 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-
+using NetCoreMVC.Entities;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
 
 namespace NetCoreMVC.Controllers
 {
-    public class HomeController : Controller
+	public class HomeController : Controller
     {
 
-		public HomeController()
+		public HomeController(IServiceProvider service)
 		{
-			
+			dbcon = new TestDbContext(service.GetRequiredService<DbContextOptions<TestDbContext>>());
 		}
 
+		TestDbContext dbcon;
         public IActionResult Index()
         {
             return View();
@@ -33,6 +33,13 @@ namespace NetCoreMVC.Controllers
 
             return View();
         }
+
+		public IActionResult MysqlUser()
+		{
+			var users = dbcon.Users.ToListAsync();
+			return View(users);
+
+		}
 
         public IActionResult Error()
         {
