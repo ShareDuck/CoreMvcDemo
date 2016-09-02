@@ -23,7 +23,8 @@
     "Microsoft.EntityFrameworkCore": "1.0.0",
     "Microsoft.EntityFrameworkCore.SqlServer": "1.0.0",
     "Domain": "1.0.0-*",
-    "Service": "1.0.0-*"
+    "Service": "1.0.0-*",
+    "MySql.Data.EntityFrameworkCore": "7.0.4-IR-191"
   },
 
   "tools": {

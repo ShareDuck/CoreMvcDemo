@@ -3,17 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Service.IService.SysManage;
+
 
 namespace NetCoreMVC.Controllers
 {
     public class HomeController : Controller
     {
-		private readonly IUserManage _userManage;
 
-		public HomeController(IUserManage userManage)
+		public HomeController()
 		{
-			_userManage = userManage;
+			
 		}
 
         public IActionResult Index()
@@ -23,7 +22,7 @@ namespace NetCoreMVC.Controllers
 
         public IActionResult About()
         {
-			ViewData["Message"] = _userManage.Test();
+			
 
             return View();
         }
